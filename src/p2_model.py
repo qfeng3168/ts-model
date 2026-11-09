@@ -256,6 +256,13 @@ def main() -> None:
                      "dir_acc": dir_acc, "n": int(len(test_frame))})
         test_frame["model"] = "patchtst"
         all_test.append(test_frame)
+        ckpt = Path("/kaggle/working") if Path("/kaggle/working").exists() \
+            else ROOT / "reports"
+        test_frame.to_parquet(ckpt / f"p2_preds_{y}.parquet", index=False)
+        if best_state is not None:
+            torch.save(best_state, ckpt / f"p2_model_{y}.pt")
+        pd.DataFrame(rows).to_csv(ckpt / "p2_results_partial.csv",
+                                  index=False)
         print(f"year {y}: rank_ic={ic:.4f} dir_acc={dir_acc:.4f} "
               f"n={len(test_frame)} ({time.time() - t0:.0f}s)", flush=True)
 
