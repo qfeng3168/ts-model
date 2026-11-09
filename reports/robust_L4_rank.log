@@ -1,0 +1,14 @@
+== robustness L4_rank: 494,942 preds
+ phase  ann%  sharpe  mdd%
+     0   4.0    0.28 -33.7
+     1   8.1    0.49 -22.5
+     2   2.2    0.21 -37.4
+     3  12.9    0.67 -27.0
+     4  15.5    0.75 -32.2
+cost[legacy]: ann=4.0% sharpe=0.28 mdd=-33.7%
+cost[realistic]: ann=7.2% sharpe=0.40 mdd=-31.8%
+cost[p25]: ann=6.0% sharpe=0.36 mdd=-32.7%
+cost[p35]: ann=3.6% sharpe=0.26 mdd=-35.0%
+benchmark: {'port_ann%': 4.0, 'bench_ann%': 0.4, 'excess_ann%': 3.2, 'excess_sharpe': 0.37}
+ic: {'icir_all': np.float64(5.28), 'ic_pos_share': 0.63, 'decile_top_minus_bottom%': 0.5, 'decile_monotonicity': 0.99}
+limitup: {'picks': 19762, 'limitup_t1_share%': 0.24, 'limitup_label_share%': 5.1, 'no_bar_t1_share%': 0.0}
