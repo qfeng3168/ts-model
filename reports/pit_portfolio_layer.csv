@@ -1,0 +1,8 @@
+variant,ann%,sharpe,mdd%,avg_exp
+base (full),7.2,0.4,-38.7,1.0
+trend hard (0/1),2.5,0.23,-37.3,0.5
+trend soft (0.5/1),5.2,0.37,-34.2,0.75
+qvix calm (0.5/1),4.5,0.3,-42.0,0.9
+vol target 15%,5.0,0.33,-38.3,0.78
+vt + trend soft,4.3,0.35,-30.9,0.58
+vt + trend soft + qvix,2.9,0.26,-31.9,0.55
